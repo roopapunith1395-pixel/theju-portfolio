@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Theju Portfolio</title>
+    <meta name="description" content="Projects developed by Theju.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            padding: 30px;
+            transition: all var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.5);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color var(--transition-speed);
+        }
+
+        .project-link:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Theju.</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="fade-in">
+            <h2 class="section-title">My Projects</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Here are some of my recent works. I focus on creating scalable and interactive applications.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-desc">A full-stack e-commerce solution featuring user authentication, payment integration, and an intuitive admin dashboard.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Live →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-panel">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-desc">A beautiful, drag-and-drop task management tool designed to boost productivity for remote teams.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Live →</a>
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-panel">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-desc">This very website! Designed with a modern dark theme, glassmorphism, and smooth animations from scratch.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">Vanilla CSS</span>
+                        <span class="project-tag">Vanilla JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Theju. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

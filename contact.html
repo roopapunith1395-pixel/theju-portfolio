@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Theju Portfolio</title>
+    <meta name="description" content="Contact Theju for opportunities and collaboration.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-panel {
+            padding: 50px 30px;
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .contact-desc {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color var(--transition-speed);
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            width: 100%;
+            justify-content: center;
+            border: 1px solid var(--card-border);
+        }
+
+        .contact-item:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            background: rgba(56, 189, 248, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Theju.</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-panel glass-panel">
+                    <span class="contact-icon">👋</span>
+                    <p class="contact-desc">I am currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:hello@example.com" class="contact-item">
+                            <span>📧</span> Send an Email
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-item">
+                            <span>💼</span> Connect on LinkedIn
+                        </a>
+                        <a href="https://github.com" target="_blank" class="contact-item">
+                            <span>💻</span> View GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Theju. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

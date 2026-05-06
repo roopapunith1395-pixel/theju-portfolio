@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Theju Portfolio</title>
+    <meta name="description" content="Certifications earned by Theju.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .cert-card {
+            padding: 25px;
+            text-align: center;
+            transition: all var(--transition-speed);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .cert-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .cert-issuer {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        /* Modal Styles for viewing certificates */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: var(--accent-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Theju.</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="fade-in">
+            <h2 class="section-title">Certifications</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">Professional certifications and courses I have completed.</p>
+            
+            <div class="cert-grid">
+                <!-- Certification Placeholder 1 -->
+                <div class="cert-card glass-panel">
+                    <span class="cert-icon">🏆</span>
+                    <h3 class="cert-title">Full Stack Web Development</h3>
+                    <p class="cert-issuer">Issued by: Tech Academy</p>
+                    <!-- Update 'data-src' with actual certificate image path later -->
+                    <button class="btn btn-outline view-cert-btn" data-src="assets/cert_placeholder.jpg">View Certificate</button>
+                </div>
+
+                <!-- Certification Placeholder 2 -->
+                <div class="cert-card glass-panel">
+                    <span class="cert-icon">🥇</span>
+                    <h3 class="cert-title">React Native Specialization</h3>
+                    <p class="cert-issuer">Issued by: Code Institute</p>
+                    <button class="btn btn-outline view-cert-btn" data-src="assets/cert_placeholder.jpg">View Certificate</button>
+                </div>
+                
+                <!-- Certification Placeholder 3 -->
+                <div class="cert-card glass-panel" style="border: 2px dashed var(--card-border); background: transparent;">
+                    <span class="cert-icon">➕</span>
+                    <h3 class="cert-title">More coming soon...</h3>
+                    <p class="cert-issuer">Currently learning new skills</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Certificate">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Theju. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Modal Logic
+        const modal = document.getElementById("certModal");
+        const modalImg = document.getElementById("modalImg");
+        const btns = document.querySelectorAll(".view-cert-btn");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // To prevent broken image icon before actual certs are added:
+                // modal.style.display = "block";
+                // modalImg.src = this.getAttribute('data-src');
+                alert("Certificate viewing feature is ready! Add your certificate images to the 'assets' folder and update the data-src attribute.");
+            });
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

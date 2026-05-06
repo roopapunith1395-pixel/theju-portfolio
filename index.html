@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theju | Professional Portfolio</title>
+    <meta name="description" content="Professional portfolio of Theju, showcasing projects, skills, and experience.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: calc(100vh - 80px);
+            gap: 50px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 30px;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Decorative blur behind image */
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: var(--accent-color);
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 50px;
+            }
+            .hero-subtitle {
+                margin: 0 auto 30px;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Theju.</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span>Theju</span><br>A Professional<br>Developer.</h1>
+                <p class="hero-subtitle">I build beautiful, scalable, and user-centric digital experiences. Let's create something amazing together.</p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="assets/resume.pdf" download="Theju_Resume.pdf" class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/profile.jpeg" alt="Theju Profile Photo">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Theju. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
